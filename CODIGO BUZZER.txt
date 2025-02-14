@@ -1,0 +1,10 @@
+void setup() {
+  pinMode(0, OUTPUT);
+}
+
+void loop() {
+  tone(0, 523); // Suena el buzzer (523 Hz)
+  delay(2000);  // Suena por 2 segundos
+  noTone(0);    // Apaga el buzzer
+  delay(3000);  // Espera 3 segundos antes de repetir
+}
