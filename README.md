@@ -1,5 +1,5 @@
-BIENVENIDO AL PROYECTO 
-ARDUINO TEST BOX
-CIEM / CTEISA
+      BIENVENIDO AL PROYECTO 
+        ARDUINO TEST BOX
+          CIEM / CTEISA
 
-BY: Bayron Vásquez, Natalia Guzmán y Javier Noriega.
+BY: Natalia Guzmán,Javier Noriega y Bayron Vásquez.
