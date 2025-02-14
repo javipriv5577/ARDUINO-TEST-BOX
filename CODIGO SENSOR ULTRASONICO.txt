@@ -1,0 +1,26 @@
+int trig=5;  
+int echo=4;  
+int buzzer=13;  
+long distancia;   
+
+void setup(){    
+  pinMode(buzzer, OUTPUT);    
+  pinMode(trig, OUTPUT);    
+  pinMode(echo, INPUT);    
+  Serial.begin(9600);  
+}   
+
+void loop(){    
+  digitalWrite(trig, HIGH);    
+  delay(100);    
+  digitalWrite(trig, LOW);     
+
+  distancia=(pulseIn(echo, HIGH)) / 58.2;  //Calcula la distancia  
+  delay(100);     
+
+  if (distancia <= 20) {      
+    tone(buzzer, 500, 50);  //Activa el buzzer  
+  } else {      
+    noTone(buzzer);  //Desactiva el buzzer  
+  }  
+}
