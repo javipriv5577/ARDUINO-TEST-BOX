@@ -1,25 +1,30 @@
 #include <Wire.h> 
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h>//DESCARGAR LIBRERIA E INCLUIR
 
-//Crear el objeto lcd  dirección  0x3F y 16 columnas x 2 filas
-LiquidCrystal_I2C lcd(0x20,16,2);  
+LiquidCrystal_I2C lcd(0x27, 16, 2);  
 
 void setup() {
-  	//Inicializar el LCD
-  	lcd.init();
-  
-  	//Encender la luz de fondo
-  	lcd.backlight();
-  
-  	//Mensaje en el LCD
-  	lcd.print("Hola");
-   	lcd.setCursor(0,1);
-	delay(10);
+    lcd.init();  
+    lcd.backlight();
+    
+    // Mensaje inicial
+    lcd.setCursor(0, 0);
+    lcd.print("Hola");
+    lcd.setCursor(0, 1);
+    lcd.print("Iniciando...");
+    delay(2000);
+    lcd.clear(); // Limpiar pantalla antes de loop
 }
 
-void loop() 
-{
-  	lcd.setCursor(0,1);
-  	lcd.print("ARDUINO TEST BOX");
-  	delay(10);
+void loop() {
+    lcd.setCursor(0, 0);
+    lcd.print("ARDUINO TEST BOX");
+    
+    lcd.setCursor(0, 1);
+    lcd.print("     CIEM     ");
+    delay(2000);
+
+    lcd.setCursor(0, 1);
+    lcd.print("     CTEISA        ");
+    delay(2000);
 }
